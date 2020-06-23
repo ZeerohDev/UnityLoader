@@ -20,6 +20,7 @@ namespace UnityLoader
         };
 
         public string GetPrefix() { return "@symbol:"; }
+        public string GetName() { return "Core"; }
         public Dictionary<string, string> GetCommands() { return commands; }
 
         public bool ProcessCommand(string command, List<CommandArg>args)
@@ -37,7 +38,34 @@ namespace UnityLoader
                     Debug.DumpLog();
                     break;
                 case "help":
-                    Help();
+                    if (args.Count < 1)
+                    {
+                        Help(this);
+                        break;
+                    }
+                    else
+                    {
+                        bool found = false;
+                        string truePrefix = String.Empty;
+                        foreach (ICommandListener l in Console.Listeners)
+                        {
+                            truePrefix = l.GetPrefix().Trim();
+                            if (truePrefix.StartsWith("@symbol:"))
+                            {
+                                if (truePrefix.Length > 8)
+                                    truePrefix = truePrefix.Substring(8, truePrefix.Length - 8);
+                                else truePrefix = "";
+                            }
+                            else { truePrefix = l.GetPrefix().Trim(); }
+                            if (truePrefix == args[0].ToString())
+                            {
+                                Help(l);
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) Debug.Log("Cannot find a command listener with the prefix <i>" + args[0] + "</i>.", LogType.Severe);
+                    }
                     break;
                 case "version":
                     Debug.Log("TweakLoader - Version <b>" + Version.Get() + "</b>");
@@ -65,10 +93,10 @@ namespace UnityLoader
             Debug.Log("This is an error message with a timestamp.", LogType.Severe, true);
         }
 
-        private void Help()
+        private void Help(ICommandListener listener)
         {
-            Debug.Log("Core Commands", LogType.Info);
-            foreach (KeyValuePair<string, string> cmd in commands)
+            Debug.Log(listener.GetName() + " Commands", LogType.Info);
+            foreach (KeyValuePair<string, string> cmd in listener.GetCommands())
             {
                 Debug.Log("<i>" + cmd.Key + "</i>" + " - " + cmd.Value);
             }

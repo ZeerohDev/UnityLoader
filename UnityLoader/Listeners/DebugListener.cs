@@ -25,6 +25,7 @@ namespace UnityLoader
         };
 
         public string GetPrefix() { return "dbg"; }
+        public string GetName() { return "Debug"; }
         public Dictionary<string, string> GetCommands() { return commands; }
 
         public bool ProcessCommand(string command, List<CommandArg> args)

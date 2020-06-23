@@ -1,5 +1,3 @@
-C:\Users\Zero\source\repos\UnityLoader\UnityLoader\obj\Debug\UnityLoader.csprojAssemblyReference.cache
-C:\Users\Zero\source\repos\UnityLoader\UnityLoader\obj\Debug\UnityLoader.csproj.CoreCompileInputs.cache
 C:\Users\Zero\source\repos\UnityLoader\UnityLoader\bin\Debug\UnityLoader.dll
 C:\Users\Zero\source\repos\UnityLoader\UnityLoader\bin\Debug\UnityLoader.pdb
 C:\Users\Zero\source\repos\UnityLoader\UnityLoader\bin\Debug\Unity.Analytics.DataPrivacy.dll
@@ -70,6 +68,8 @@ C:\Users\Zero\source\repos\UnityLoader\UnityLoader\bin\Debug\UnityEngine.VideoMo
 C:\Users\Zero\source\repos\UnityLoader\UnityLoader\bin\Debug\UnityEngine.VRModule.dll
 C:\Users\Zero\source\repos\UnityLoader\UnityLoader\bin\Debug\UnityEngine.WindModule.dll
 C:\Users\Zero\source\repos\UnityLoader\UnityLoader\bin\Debug\UnityEngine.XRModule.dll
+C:\Users\Zero\source\repos\UnityLoader\UnityLoader\obj\Debug\UnityLoader.csproj.CoreCompileInputs.cache
 C:\Users\Zero\source\repos\UnityLoader\UnityLoader\obj\Debug\UnityLoader.csproj.CopyComplete
 C:\Users\Zero\source\repos\UnityLoader\UnityLoader\obj\Debug\UnityLoader.dll
 C:\Users\Zero\source\repos\UnityLoader\UnityLoader\obj\Debug\UnityLoader.pdb
+C:\Users\Zero\source\repos\UnityLoader\UnityLoader\obj\Debug\UnityLoader.csprojAssemblyReference.cache

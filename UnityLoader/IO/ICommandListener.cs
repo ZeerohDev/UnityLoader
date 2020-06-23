@@ -9,6 +9,7 @@ namespace UnityLoader
     public interface ICommandListener
     {
         string GetPrefix();
+        string GetName();
         Dictionary<string, string> GetCommands();
         bool ProcessCommand(string command, List<CommandArg> args);
     }
